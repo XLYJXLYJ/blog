@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>显示文章列表</title>
+    </head>
+    <body>
+        <div id="admin">
+            <h2>显示文章列表</h2>
+            <% data.forEach(function(item,idx) {%>
+            <ul  class="list-unstyled">
+                <li class="title"><%=item.title%></li>
+                <li><%=item.context%></li>
+                <button class="btn btn-success"><a href='/admin/editcats/edit?id=<%= item._id %>'>编辑文章</a></button> <!-- 有一个点要注意 -->
+                <button class="btn btn-success"><a href='/admin/editcats/delete?id=<%= item._id %>'>删除</a></button>
+            </ul>
+            <%})%>
+            <button class="btn btn-success"><a href='/admin/addcats'>添加文章</a></button>
+        </div>
+    </body>
+</html>
+<style>
+html body{
+    margin: 0px;
+    padding: 0px;
+}
+#admin{
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+} 
+.title{
+    font-size: 20px;
+    font: bold; 
+}
+</style>

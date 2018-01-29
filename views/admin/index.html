@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+      <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>XLYJ博客后台管理系统</title>
+    </head>
+    <body>
+      <div id="admin">
+          <h1>XLYJ博客后台管理系统</h1>
+          <form action="/admin/admin" method="post" role="form">
+            <input type="text" name="user" class="form-control">
+            <input type="password" name="password" class="form-control">
+            <button type="submit" class="btn btn-success">登陆</button>
+          </form>
+      </div>
+    </body>
+</html>
+<style>
+html body{
+    margin: 0px;
+    padding: 0px;
+  }
+#admin{
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15%;
+  }
+#admin input{
+   margin: 20px;
+}
+#admin .context{
+    width: 100%;
+    height:30%; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}  
+</style>

@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>显示文章列表</title>
+    </head>
+    <body>
+        <div id="admin">
+            <div id="head">
+                <h3 class="animated zoomIn">XLYJ的个人博客</h3>
+            </div>
+            <% data.forEach(function(item,idx) {%>
+                <ul  class="list-unstyled">
+                    <li class="animated flash title"><%=item.title%></li>
+                    <li class="animated jello context"><%=item.context%></li>
+                    <a class="des animated bounceInLeft" href='/home/context/des?id=<%=item._id%>'>详情...</a>
+                </ul>
+            <%})%>
+        </div>
+    </body>
+</html>
+<style>
+html body{
+    margin: 0px;
+    padding: 0px;
+}
+#head{
+    text-align: center;
+}
+#admin{
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+} 
+.title{
+    font-size: 20px;
+    font: bold; 
+    margin: 0 auto;
+}
+.context{
+    height: 40px;
+    overflow: hidden;
+    text-indent: 24px;
+}
+.des{
+    float: right;
+}
+</style> 
+ 

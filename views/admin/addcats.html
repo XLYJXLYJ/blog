@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+      <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>添加文章</title>
+    </head>
+    <body>
+      <div id="admin">
+      <h2>添加文章</h2>
+        <form action="/admin/addcats/add"method="post" role="form">
+              <input type="text" class="form-control" name="addcats" placeholder="添加标题">
+              <textarea type="text" class="form-control context" name="addcontext" name="addcontext" placeholder="添加内容"></textarea>
+              <button class="btn btn-success" type="submit">提交
+        </form>
+      </div>
+    </body>
+</html>
+<style>
+html body{
+    margin: 0px;
+    padding: 0px;
+  }
+#admin{
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+#admin .context{
+    height:30%; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}  
+</style>
+    
